@@ -1,0 +1,109 @@
+:root {
+  --primary-light: #E8F5E9;
+  --primary: #A5D6A7;
+  --primary-dark: #66BB6A;
+  --background: #F9FCF9;
+  --surface: #ffffff;
+  --text-main: #2E3B32;
+  --text-muted: #5C7060;
+  --border: #C8E6C9;
+  --error: #E57373;
+  --warning: #FFB74D;
+  --success: #81C784;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: var(--primary-dark);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  box-shadow: 0 4px 6px rgba(102, 187, 106, 0.2);
+}
+
+button:disabled {
+  background-color: var(--primary);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text-main);
+  background: white;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-dark), #43a047);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
